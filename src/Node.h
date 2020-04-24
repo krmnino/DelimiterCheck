@@ -1,17 +1,24 @@
-#ifndef NODE
-#define NODE
-
 template<typename T> class Node {
 private:
 	T data;
 	Node* next;
 public:
-	Node(T d) : data(d), next(nullptr) {}
-	~Node() {};
-	void set_data(T);
-	void set_next(Node*);
-	T get_data();
-	Node* get_next();
-};
+	Node(T data) : data(data), next(nullptr) {}
 
-#endif // !NODE
+	~Node() {};
+
+	void set_data(T data) {
+		this->data = data;
+	}
+
+	void set_next(Node* n) {
+		this->next = n;
+	}
+	T get_data() {
+		return this->data;
+	}
+
+	Node* get_next() {
+		return this->next;
+	}
+};
